@@ -3,7 +3,7 @@
 
 /* 変数定義 */
 :root {
-    --primary-color: #F06292; /* 主なピンク色 */
+    --primary-color: #42A5F5; /* 主な青色 */
     --dark-bg: #121212; /* ダーク背景 */
     --light-bg: #1f1f1f; /* やや明るい背景 */
     --text-color: #E0E0E0; /* 明るいテキスト */
@@ -23,13 +23,13 @@ h1, h2, h3, h4, h5, h6, .card-title {
     font-family: var(--heading-font);
     color: var(--primary-color); /* Fallback for older browsers */
 
-    /* Shimmering Pink Effect */
-    background: linear-gradient(135deg, #FFC0CB, #FF69B4, #C71585, #FFC0CB);
+    /* Shimmering Blue Effect */
+    background: linear-gradient(135deg, #90CAF9, #42A5F5, #1E88E5, #90CAF9);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 8s linear infinite;
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+    text-shadow: 0 0 10px rgba(66, 165, 245, 0.4);
 }
 
 @keyframes shine {
