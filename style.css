@@ -1,207 +1,85 @@
-/* Google Fontsのインポート */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* 変数定義 */
-:root {
-    --primary-color: #FFD166; /* イエロー */
-    --secondary-color: #06D6A0; /* ティール */
-    --accent-color: #EF476F; /* マゼンタ */
-    --text-color: #1A1A1A; /* 濃いテキスト */
-    --bg-color: #FFFFFF; /* 白背景 */
-    --light-gray: #f8f9fa;
-    --font-family: 'Poppins', sans-serif;
-}
-
-/* 全体 */
 body {
-    padding-top: 56px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-/* ナビゲーションバー */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-.navbar-brand {
-    font-weight: 700;
-    color: var(--accent-color) !important;
-}
-.nav-link {
-    font-weight: 600;
-    color: #555 !important;
-    transition: color 0.2s;
-}
-.nav-link:hover {
-    color: var(--accent-color) !important;
-}
-.btn-primary {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    border-radius: 50px;
-    font-weight: 600;
-    padding: 10px 25px;
-    transition: all 0.3s ease;
-}
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(239, 71, 111, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s;
 }
 
-/* ヒーローセクション */
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
 .hero-section {
-    background-color: var(--primary-color);
-    padding: 100px 0;
-    text-align: center;
-    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200') no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
     position: relative;
 }
-.hero-section::before {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    top: -50px;
-    left: -50px;
-    opacity: 0.5;
-}
+
 .hero-section::after {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: var(--accent-color);
-    border-radius: 45%;
-    bottom: -100px;
-    right: -100px;
-    opacity: 0.5;
-    transform: rotate(30deg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .hero-section .container {
     position: relative;
-    z-index: 2;
-}
-.hero-section h1 {
-    font-size: 3.5rem;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-.hero-section p {
-    color: #fff;
-    font-size: 1.2rem;
+    z-index: 1;
 }
 
-/* カードスタイル */
-.card {
+#problems .card {
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-8px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-/* 特徴セクション */
-#features img {
-    border-radius: 15px;
+#problems .card:hover {
+    transform: translateY(-10px);
 }
 
-/* 参加方法セクション */
+.step {
+    padding: 30px;
+}
+
 .step-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    width: 60px;
+    height: 60px;
+    background-color: #0d6efd;
     color: white;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 料金プランセクション */
+#testimonials .card {
+    background-color: #ffffff;
+}
+
 #pricing .card {
-    border-radius: 20px;
-}
-#pricing .card.border-primary {
-    border: 3px solid var(--secondary-color);
-}
-#pricing .card-header {
-    background-color: transparent;
-    border-bottom: none;
-    padding-top: 2rem;
-}
-#pricing .card-header h3 {
-    color: var(--accent-color);
-}
-.btn-outline-primary {
-    border-radius: 50px;
-    border-width: 2px;
-    font-weight: 600;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-.btn-outline-primary:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+    transition: box-shadow 0.3s;
 }
 
-/* FAQセクション */
-.accordion-item {
-    border: none;
-    border-radius: 10px !important;
-    margin-bottom: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.accordion-button {
-    border-radius: 10px !important;
-    font-weight: 600;
-    color: var(--text-color);
-}
-.accordion-button:not(.collapsed) {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-.accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 209, 102, 0.5);
+#pricing .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* フッター */
-footer {
-    background-color: var(--light-gray);
-    margin-top: 4rem;
-}
 footer a {
-    color: #555;
-    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
 }
+
 footer a:hover {
-    color: var(--accent-color);
-}
-
-/* スクロールアニメーション */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+    text-decoration: underline;
 }
